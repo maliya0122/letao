@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品管理</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="assets/nprogress/nprogress.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+	<!-- 左边菜单栏 -->
+	<div class="left">
+		<div class="tilte"><a href="index.html">ITCAST</a></div>
+		<div class="user clearfix">
+			<img src="images/default.png" alt="">
+			<p>超级管理员</p>
+		</div>
+		<div class="menu">
+			<ul>
+			    <li>
+			    	<a href="user.html"><span class="glyphicon glyphicon-user"></span> 用户管理</a>
+			    </li>
+	            <li>
+	                <a href="javascript:;"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
+	                <div class="child" style="display: none">
+	                    <a href="cate1.html">一级分类</a>
+	                    <a href="cate2.html">二级分类</a>
+	                </div>
+	            </li>
+	            <li class="now" >
+	            	<a href="product.html"><span class="glyphicon glyphicon-tags"></span> 商品管理</a>
+	            </li>
+			</ul>
+		</div>	
+	</div>
+
+	<!-- 右边内容页面 -->
+	<div class="right">
+		<header>
+			<a href="#" class="ileft" id="ileft">
+				<span class="glyphicon glyphicon-align-justify"></span>
+			</a>
+			<a href="#" class="iright" id="iright" data-toggle="modal" data-target="#logoutModal">
+				<span class="glyphicon glyphicon-log-out"></span>
+			</a>
+		</header>
+		<div class="content">
+			<ol class="breadcrumb con_nav">
+			  <li><a href="#">管理系统</a></li>
+			  <li class="active">商品管理</li>
+			</ol>
+			<div class="con_data">
+				<button class="btn btn-default mb_20" id="add" data-toggle="modal" data-target="#myModal_product">添加商品</button>
+				<table class="table table-bordered table-hover text-center">
+					<thead class="table_title">
+					    <tr>
+					      <th class="col-md-1 text-center">序号</th>
+					      <th class="col-md-3 text-center">商品名称</th>
+					      <th class="col-md-2 text-center">商品描述</th>
+					      <th class="col-md-1 text-center">商品库存</th>
+					      <th class="col-md-1 text-center">商品尺寸</th>
+					      <th class="col-md-1 text-center">商品状态</th>
+					      <th class="col-md-4 text-center">操作</th>
+					    </tr>
+					  </thead>
+					<tbody class="table_data">
+						<!-- 渲染数据 -->
+					</tbody>
+				</table>
+				<div class="col-lg-12" align="right">
+					<!-- 注意:3版本的分页容器标签是<ul>，2版本的容器标签是<div> -->
+					<ul id="mypage"></ul>
+				</div>
+			</div>
+			<!-- 模态框 -->
+			<div class="modal fade" id="myModal_product" tabindex="-1" role="dialog">
+			  	<div class="modal-dialog modal-sm" role="document">
+			    	<div class="modal-content">
+			      	<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        	<h4 class="modal-title">添加二级分类</h4>
+			      	</div>
+			      	<div class="modal-body">
+			      		<!-- 表单序列化，表单校验的格式：都是通过name属性来取值的 -->
+			      		<form id="form">
+							<input type="text" class="form-control" name="proName" placeholder="产品名称">
+							<input type="text" class="form-control" name="proDesc" placeholder="产品描述">
+							<input type="text" class="form-control" name="num" placeholder="库存">
+							<input type="text" class="form-control" name="price" placeholder="价格">
+							<input type="text" class="form-control" name="oldPrice" placeholder="原价">
+							<input type="text" class="form-control" name="size" placeholder="尺码">
+							<input type="file" class="form-control" class="btn btn-default">上传图片
+			      		</form>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        	<button type="submit" class="btn btn-primary" form="form">确定</button>
+			      	</div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+
+<script type="text/artTemplate" id="product">
+	{{each comments.rows}}
+	<tr>
+		<td>{{$index+1+(comments.page-1)*comments.size}}</td>
+		<td>{{$value.proName}}</td>
+		<td>{{$value.proDesc}}</td>
+		<td>{{$value.num}}</td>
+		<td>{{$value.size}}</td>
+		<td>{{if $value.statu==1}}已上架{{else}}下架{{/if}}</td>
+		<td><button class="btn btn-default btn-danger mr_20">编辑</button><button class="btn btn-default btn-primary">{{if $value.statu==1}}下架{{else}}上架{{/if}}</button></td>
+	</tr>
+	{{/each}}
+
+
+</script>
+
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/artTemplate/template.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script language="JavaScript" src="assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="assets/nprogress/nprogress.js"></script>
+<script src="assets/echarts/echarts.min.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/product.js"></script>
+
+</body>
+</html>

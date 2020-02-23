@@ -1,0 +1,125 @@
+.tb_search{
+	padding: 10px;
+}
+.tb_search form{
+	width: 100%;
+	height: 32px;
+	position: relative;
+}
+.tb_search form input{
+	width: 100%;
+	height: 30px;
+	padding-left: 10px;
+	text-align: left;
+	background-color: #fff;
+	margin: 0;
+	border: 1px solid #EE5C42;
+}
+.tb_search a{
+	position: absolute;
+	top: 11px;
+	right: 10px;
+	width: 60px;
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	background-color: #EE5C42;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.tb_order .tb_nav{
+	width: 100%;
+	height: 40px;
+	background-color: #eee;
+}
+.tb_order .tb_nav li{
+	width: 25%;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+}
+.tb_order .tb_nav li.now{
+	color: #EE5C42;
+}
+
+.nav_content{
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.nav_content .c_title img{
+	width: 100%;
+	display: block;
+}
+.nav_content .product{
+	float: left;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	width: 46%;
+	margin: 2%;
+	text-align: center;
+}
+.nav_content .product img{
+	width: 100%;
+	display: block;
+}
+.nav_content .product p{
+	font-size: 10px;
+	color: #999;
+	margin: 0;
+}
+.nav_content .product p .price_new{
+	font-size: 15px;
+	color: red;
+	margin-right: 5px;
+}
+.nav_content .product p .price_old{
+	font-size: 15px;
+	text-decoration: line-through;
+}
+.nav_content .product button{
+	border: none;
+	outline: none;
+	padding: 5px 10px;
+	font-size: 12px;
+	background-color: #EE5C42;
+	color: #fff;
+	margin: 10px auto;
+}
+.tb_history > p{
+	display: block;
+	color: #000;
+	padding-left: 15px;
+}
+
+.tb_history .historybox{
+	padding: 10px;
+}
+.tb_history .historybox .left{
+	float: left;
+}
+.tb_history .historybox .right{
+	float: right;
+}
+.tb_history .inputbox{
+	width: 100%;
+	padding: 0 10px;
+	position: relative;
+}
+.tb_history .inputbox input{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	text-align: left;
+	padding-right: 40px;
+}
+.tb_history .inputbox span{
+	position: absolute;
+	top: -3px;
+	right: 9px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}

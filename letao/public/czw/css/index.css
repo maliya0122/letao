@@ -1,0 +1,82 @@
+html,
+body {
+    height: 100%;
+}
+.tt_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.tt_container .tt_header {
+    height: 45px;
+    width: 100%;
+    background: #006699;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    line-height: 45px;
+    color: #fff;
+    text-align: center;
+    z-index: 999;
+}
+.tt_container .tt_header a {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 45px;
+}
+.tt_container .tt_header .left {
+    left: 0;
+}
+.tt_container .tt_header .right {
+    right: 0;
+}
+.tt_container .tt_header h3 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 45px;
+    font-weight: normal;
+}
+.tt_container .tt_footer {
+    width: 100%;
+    height: 55px;
+    background: #006699;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    /* left: 0; */
+}
+.tt_container .tt_footer a {
+    color: #fff;
+    width: 25%;
+    float: left;
+    text-align: center;
+    height: 55px;
+    padding-top: 8px;
+}
+.tt_container .tt_footer a.now {
+    color: orange;
+}
+.tt_container .tt_footer a span {
+    display: block;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.tt_container .tt_content {
+    padding: 45px 0 55px 0;
+    width: 100%;
+    height: 100%;
+}
+.mui-scroll {
+    padding: 45px 0 55px 0;
+}
+.tt_container .tt_content .tt_wrapper {
+    width: 100%;
+    height: 100%;
+}
+/* .mui-slider-indicator {
+    z-index: 999;
+} */

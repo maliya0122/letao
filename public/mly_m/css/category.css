@@ -1,0 +1,48 @@
+.cate_left{
+	width: 100px;
+	height: 100%;
+	float: left;
+}
+.cate_left ul{
+	width: 60px;
+}
+.cate_left ul li{
+	width: 100px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: #eee;
+}
+.cate_left ul li.now{
+	background-color: #fff;
+	border-right: none;
+}
+.cate_left ul li.now a{
+	color: orange;
+}
+.cate_left ul li a{
+	color: #000;
+	display: block;
+}
+.cate_right{
+	overflow: hidden;
+	padding-top: 10px;
+	background-color: #fff;
+}
+.cate_right ul{
+	width: 100%;
+}
+.cate_right ul li{
+	width: 33.333%;
+	float: left;
+}
+.cate_right ul li a{
+	display: block;
+	text-align: center;
+}
+.cate_right ul li a img{
+	max-width: 66px;
+	margin: 0 auto;
+}

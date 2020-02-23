@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>折叠菜单</title>
+    <meta charset="utf-8">
+    <style>
+        ul,li{
+            list-style: none;
+        }
+        ul{
+            width: 180px;
+        }
+        li{
+            width: 100%;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="test.html">菜单一</a>
+        </li>
+        <li class="haschild">
+            <a href="#">菜单二</a>
+            <div style="display: none">
+                <a href="#"><p>一级菜单</p></a>
+                <a href="#"><p>二级菜单</p></a>
+            </div>
+        </li>
+    </ul>
+
+    <div>
+        <img src="" id="img" width="50px" height="50px" alt="">
+        <input type="file" id="file" name="file">
+    </div>
+
+     <form enctype="multipart/form-data">
+        <div class="box">
+            <input type="file" name="front" class="upload-file">
+             <a href="javascript:;">侧面</a>
+             <img src="" alt="">
+        </div>
+    </form>
+
+<script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.haschild').on('click',function(){
+            $('div').slideToggle();
+        });
+
+         $('#file').change(function(){
+            var file=this.files[0];
+            $filePath=URL.createObjectURL(file);
+            $('#img').attr('src',$filePath);
+         });
+
+
+         function imgPreview(fileDom,e,ele){
+            //获取文件
+            var file = fileDom.files[0];
+            var supportedTypes = ['image/jpg', 'image/jpeg', 'image/png'];
+            if(!(supportedTypes.indexOf(file.type)>-1)){
+                alert('请选择.jpg、.png格式图片')
+                return;
+            }
+            var uploadFiles = e.target.files || e.dataTransfer.files;
+            console.log(file.type);
+            var size=uploadFiles.length;
+            for(var i=0;i<size;i++){
+                /*读取文件*/
+                var reader=new FileReader();
+                reader.readAsDataURL(uploadFiles[i]);
+                reader.onload=function (e) {
+                    var imgBase=e.target.result;
+                    console.log(e.target);
+                    ele.siblings('img').attr('src',imgBase).show()
+                }
+            }
+
+        }
+        $('.upload-file').change(function (e) {
+            imgPreview(this,e,$(this));
+        })
+    })
+
+</script>
+</body>
+</html>

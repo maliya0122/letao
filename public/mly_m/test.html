@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="col-sm-3 col-md-2 sidebar">
+    <div class="totalt"><a>系统管理系统</a></div>
+    <ul class="menu">
+        <li class="title">
+
+            <a class="item item1"><span class="glyphicon glyphicon-chevron-down myarrow "></span>账号管理
+            </a>
+
+
+            <ul class="content">
+                <li> <a class="item item2"  href="right5.html" target="right" ><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a>
+                </li>
+                <li>  <a class="item item2" href="right.html" target="right"><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a></li>
+                <li> <a class="item item2" href="right2.html" target="right"><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a></li>
+
+            </ul>
+        </li>
+        <li class="title ">
+
+            <a class=" item item1"><span class="glyphicon glyphicon-chevron-down myarrow "></span>账号管理
+            </a>
+
+            <ul class="content">
+                <li> <a class="item item2" href="#" ><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a>
+                </li>
+                <li> <a class="item item2" href="#"><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a></li>
+                <li> <a class="item item2" href="#"><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a></li>
+
+            </ul>
+        </li>
+
+        <li class="title">
+
+            <a class="item item1"><span class="glyphicon glyphicon-chevron-down myarrow "></span>账号管理
+            </a>
+
+            <ul class="content">
+                <li>
+                    <a class="item item2" href="#" >
+                        <span class="glyphicon glyphicon-step-backward "></span>账号管理
+                    </a>
+                </li>
+                <li>  <a class="item item2" href="#" ><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a></li>
+                <li> <a class="item item2" href="#" ><span class="glyphicon glyphicon-step-backward "></span>账号管理
+                </a></li>
+
+            </ul>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<script src="assets/zepto/zepto.min.js">
+	$(".title .item1").click(function(){
+    	$(this).next(".content").slideToggle();//实现二级菜单的展开收缩功能
+    	$(this).find("span").toggleClass("glyphicon glyphicon-chevron-down");//实现菜单点击时图标的转换效果
+    	$(this).find("span").toggleClass("glyphicon glyphicon-chevron-right");
+	})
+
+</script>
+	
+</body>
+</html>

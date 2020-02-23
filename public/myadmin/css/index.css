@@ -1,0 +1,139 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+ul,li{
+	list-style: none;
+	z-index: 99;
+}
+a,
+a:hover,
+a:focus{
+	text-decoration: none;
+}
+.mb_20{
+	margin-bottom: 20px;
+}
+.mt_20{
+	margin-top: 20px;
+}
+.mr_20{
+	margin-right: 20px;
+}
+.left{
+	width: 180px;
+	height: 100%;
+	background-color: #222d32;
+	float: left;
+}
+.left .tilte{
+	width: 100%;
+	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	background-color: #E05C41;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+.left .tilte a{
+	text-decoration: none;
+	color: #000;
+}
+.left .user{
+	padding: 25px;
+}
+.left .user img{
+	display: block;
+	width: 50px;
+	height: 50px;
+	float: left;
+	border-radius: 50%;
+}
+.left .user p{
+	float: right;
+	color: #fff;
+	line-height: 50px;
+}
+.left .menu{
+	width: 180px;
+}
+ul,li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu ul li{
+}
+.menu ul li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #aaa;
+    border: 3px solid transparent;
+    padding-left: 30px;
+}
+.menu ul li a span{
+	margin-right: 10px;
+}
+.menu ul li.now > a{
+    border-left-color: #3c8dbc;
+    background: #1d1f21;
+    color: #fff;
+}
+.menu ul li .child a{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 50px;
+    font-size: 12px;
+}
+.menu ul li .child a.now{
+    color: #fff;
+}
+
+.right{
+	overflow: hidden;
+	height: 100%;
+}
+.right header{
+	width: 100%;
+	height: 50px;
+	background-color:#EE5C42;
+	position: relative;
+}
+.right header a{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 18px;
+	color: #fff;
+	font-size: 16px;
+}
+.right header .ileft{
+	left: 20px;
+}
+.right header .iright{
+	right: 20px;
+}
+.right .content{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+.echartsbox{
+	width: 100%;
+}
+.echartsbox #echarts1,
+.echartsbox #echarts2{
+	width: 45%;
+	height: 400px;
+	float: left;
+}
