@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索页面</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/search.css">
+    
+</head>
+<body class="body">
+    <!-- 头部 -->
+    <header class="header">
+        <div class="left mui-icon mui-icon-back"></div>
+        <div class="center">
+            搜素页面
+        </div>
+        <div class="right mui-icon mui-icon-search"></div>
+    </header>
+
+    <div class="container">
+        <form action="#" class="search">
+            <input type="search" placeholder="输入你想搜索的商品~">
+        </form>
+        <button id="btn">搜索</button>
+
+        <div class="box">
+            <div class="btn">
+                <a href="#" class="show">搜索历史</a>
+                <a href="#" class="clear">清空历史</a>
+            </div>
+            
+            <ul class="list">
+                <!-- 渲染的地方 -->
+                
+            </ul>
+        </div>
+
+    </div>
+
+    
+    <!-- 底部 -->
+    <footer class="footer">
+        <a href="./index.html">
+            <span class="mui-icon mui-icon-pengyouquan"></span>
+            <p>首页</p>
+        </a>
+        <a href="./category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <p>分类</p>
+        </a>
+        <a href="./cart.html">
+            <span class="mui-icon mui-icon-star"></span>
+            <p>购物车</p>
+        </a>
+        <a href="./profile.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <p>我的</p>
+        </a>
+    </footer>
+
+    <script id="list" type="text/html">
+        {{each comments}}
+            <li><span class="value">{{$value}}</span><span class="mui-icon mui-icon-trash delete"></span></li>
+        {{/each}}
+    </script>
+    <script src="./assets/zepto/zepto.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./assets/Art-template/template-web.js"></script>
+    
+    
+</body>
+</html>

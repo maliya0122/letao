@@ -1,0 +1,14 @@
+.container{
+    padding-top: 45px;
+    padding-bottom: 55px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.wrapper{
+    width: 100%;
+    height: cacul(100vh - 100px);
+}
+.mui-pull-top-pocket {
+    top: 50px !important;
+}

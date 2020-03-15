@@ -1,0 +1,45 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    padding-top: 45px;
+    padding-bottom: 55px;
+    width: 100%;
+    height:cacul(100vh - 100px);
+}
+.menu{
+    flex:2;
+    height:100%;
+    background-color: #eee;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+.menu li{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    line-height: 50px;
+    text-align: center;
+}
+.menu li a{
+    color: #000;
+}
+.now{
+    background-color: #fff;
+}
+.list{
+    flex:8;
+    height:100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+.list li{
+    float: left;
+    width: 33.333%;
+    text-align: center;
+}

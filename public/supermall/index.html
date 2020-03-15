@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蘑菇街</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .container{
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body class="body">
+    <!-- 头部 -->
+    <header class="header">
+        <div class="left"></div>
+        <div class="center">
+            首页
+        </div>
+        <a class="right mui-icon mui-icon-search" href="./search.html">
+        
+        </a>
+    </header>
+
+    <div class="container">
+        <div>
+            hhhhhhhhhhhhhhhhhhhhhh
+        </div>
+    
+        <button class="box">按钮</button>
+        <div></div>
+        <p>这是一句话</p>
+    </div>
+
+    
+
+    
+    <!-- 底部 -->
+    <footer class="footer">
+        <a href="./index.html" class="active">
+            <span class="mui-icon mui-icon-pengyouquan"></span>
+            <p>首页</p>
+        </a>
+        <a href="./category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <p>分类</p>
+        </a>
+        <a href="./cart.html">
+            <span class="mui-icon mui-icon-star"></span>
+            <p>购物车</p>
+        </a>
+        <a href="./profile.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <p>我的</p>
+        </a>
+    </footer>
+    <script src="./assets/zepto/zepto.js"></script>
+    <script>
+        $(document).on("click",".box",{"name":111},function () {
+            console.log(event.data)
+        });
+
+        $(".box").on("click",{},function (event) {
+            console.log(event)
+        })
+
+    </script>
+
+    
+</body>
+</html>
